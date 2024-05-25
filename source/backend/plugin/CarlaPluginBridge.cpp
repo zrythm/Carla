@@ -247,7 +247,8 @@ protected:
         {
             const ScopedEngineEnvironmentLocker _seel(kEngine);
 
-           #ifdef CARLA_OS_LINUX
+            /* these break Zrythm */
+           #if 0
             const CarlaScopedEnvVar sev1("LD_LIBRARY_PATH", nullptr);
             const CarlaScopedEnvVar sev2("LD_PRELOAD", nullptr);
            #endif
